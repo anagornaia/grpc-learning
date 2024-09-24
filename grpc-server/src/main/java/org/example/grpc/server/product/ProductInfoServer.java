@@ -1,8 +1,7 @@
-package org.example.grpc.server;
+package org.example.grpc.server.product;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import org.example.grpc.server.product.ProductInfoImpl;
 
 import java.io.IOException;
 import java.util.logging.Logger;

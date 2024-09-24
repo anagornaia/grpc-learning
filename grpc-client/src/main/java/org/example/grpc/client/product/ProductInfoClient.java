@@ -35,10 +35,6 @@ public class ProductInfoClient {
         Product product2 = stub.getProduct(productId2);
         logger.info("Product: [%s]".formatted(product2.toString()));
 
-//        GetProductsByCriteriaResponse products = stub.getAllProducts(GetProductsByCriteriaRequest.newBuilder().build());
-//
-//        logger.info("Products: \n[%s]".formatted(products.getProductsList().toString()));
-
         channel.shutdown();
     }
 

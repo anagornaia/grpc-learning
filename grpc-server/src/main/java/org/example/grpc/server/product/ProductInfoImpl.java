@@ -48,11 +48,4 @@ public class ProductInfoImpl extends ProductInfoGrpc.ProductInfoImplBase {
 
     }
 
-    @Override
-    public void getAllProducts(GetProductsByCriteriaRequest request, StreamObserver<GetProductsByCriteriaResponse> responseObserver) {
-        productService.getAllProducts().forEach(product -> {
-            responseObserver.onNext(GetProductsByCriteriaResponse.newBuilder().addProducts(product).build());
-        });
-    }
-
 }

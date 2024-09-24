@@ -23,10 +23,6 @@ public class ProductService {
         return randomUUIDString;
     }
 
-    public Collection<Product> getAllProducts() {
-        return productMap.values();
-    }
-
     public Product getByUuid(String id) {
         if (!productMap.containsKey(id)) {
             throw new IllegalArgumentException("Product not found");
