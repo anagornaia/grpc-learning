@@ -26,7 +26,7 @@ public class ProtoUtils {
      * @param value the float to convert
      * @return the converted FloatValue
      */
-    public static FloatValue convertToStringValue(float value) {
+    public static FloatValue convertToFloatValue(float value) {
         return FloatValue.newBuilder()
                 .setValue(value)
                 .build();

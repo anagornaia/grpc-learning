@@ -9,7 +9,7 @@ public class ProductDataGeneratorService {
         return Product.newBuilder()
                 .setName(ProtoUtils.convertToStringValue("Samsung S10"))
                 .setDescription(ProtoUtils.convertToStringValue("Samsung S10 is a smart phone"))
-                .setPrice(ProtoUtils.convertToStringValue(700.0f))
+                .setPrice(ProtoUtils.convertToFloatValue(700.0f))
                 .build();
     }
 }
