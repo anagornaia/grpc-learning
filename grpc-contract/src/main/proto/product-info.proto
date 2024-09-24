@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package org.example.grpc.contract;
+
+option java_multiple_files = true;
+
+service ProductInfo {
+  rpc addProduct(Product) returns (ProductId);
+  rpc getProduct(ProductId) returns (Product);
+  rpc getAllProducts(GetProductsByCriteriaRequest) returns (GetProductsByCriteriaResponse);
+
+}
+
+message Product {
+  string id = 1;
+  google.protobuf.StringValue name = 2;
+  google.protobuf.StringValue description = 3;
+  google.protobuf.FloatValue price = 4;
+}
+
+message ProductId {
+  google.protobuf.StringValue id = 1;
+}
+
+message GetProductsByCriteriaRequest {
+  google.protobuf.StringValue name = 1;
+  google.protobuf.StringValue description = 2;
+  google.protobuf.FloatValue price = 3;
+}
+
+message GetProductsByCriteriaResponse {
+  repeated Product products = 1;
+}
